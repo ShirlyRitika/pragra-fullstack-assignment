@@ -1,5 +1,4 @@
-🛒 Pragra Full-Stack Assignment
-A complete full-stack e-commerce application built as part of the Pragra technical assignment.
+ full-stack e-commerce application built as part of the Pragra technical assignment.
 
 Tech Stack
 
