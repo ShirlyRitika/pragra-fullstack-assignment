@@ -1,34 +1,46 @@
- full-stack e-commerce application built as part of the Pragra technical assignment.
+This is a full-stack e-commerce style application built using:
 
-Tech Stack
-
-Frontend: Next.js (TypeScript, Tailwind CSS)
-
-Backend: NestJS
-
-Database: MongoDB (Atlas)
-
-Authentication: JWT, Email Verification
-
+Frontend: Next.js with TypeScript  
+Backend: NestJS  
+Database: MongoDB  
 Payments: Stripe (Test Mode)
 
-✨ Features Implemented
-🔐 Authentication
+ 🚀 Features Implemented
 
-Email & Password Signup/Login
+Authentication
+- Email & Password signup & login
+- Email verification
+- Google OAuth login
+- Facebook OAuth login
 
-Email Verification
+ Post-Login Features
+- Display list of products
+- Purchase products
+- Stripe payment integration (Test Mode)
 
-JWT-based Authentication
+ Bonus
+- Payment success page
+🧑‍💻 Tech Stack
 
-🛍️ Product System
+| Layer     | Technology |
+|----------|-----------|
+Frontend   | Next.js + TypeScript  
+Backend    | NestJS  
+Database   | MongoDB Atlas  
+Payments   | Stripe API  
+Deployment | Vercel (Frontend), Railway (Backend)
 
-Display list of products
+🌐 Deployed URLs
 
-Purchase products using Stripe Checkout
+Frontend (Vercel):  
+https://pragra-fullstack-assignment.vercel.app/products
 
-💳 Payments
-Stripe integration in Test Mode
+Backend (Railway):  
+https://pragra-fullstack-assignment-production.up.railway.app
 
-Secure checkout flow
+> ⚠️ Important Note  
+> Some features (authentication, products, payments) require environment variables.  
+> For security reasons, these are not included in the public deployment.  
+> The full application works correctly when run locally with the environment variables provided below.
+
 
