@@ -3,17 +3,27 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const API = process.env.NEXT_PUBLIC_API_URL;
+
 export default function ProductsPage() {
   const [products, setProducts] = useState<any[]>([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/products").then((res) => {
-      setProducts(res.data);
-    });
+    if (!API) return;
+
+    axios.get(`${API}/products`)
+      .then((res) => {
+        setProducts(res.data);
+      })
+      .catch((err) => {
+        console.error("Failed to load products:", err);
+      });
   }, []);
 
   async function handleBuy(product: any) {
-    const res = await axios.post("http://localhost:3001/payments/checkout", {
+    if (!API) return;
+
+    const res = await axios.post(`${API}/payments/checkout`, {
       productName: product.name,
       amount: product.price,
     });
