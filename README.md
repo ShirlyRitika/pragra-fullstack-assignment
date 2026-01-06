@@ -1,8 +1,12 @@
 This is a full-stack e-commerce style application built using:
 
-Frontend: Next.js with TypeScript  
-Backend: NestJS  
-Database: MongoDB  
+📦 Project Overview
+
+This is a full-stack e-commerce style application built using:
+
+Frontend: Next.js with TypeScript
+Backend: NestJS
+Database: MongoDB
 Payments: Stripe (Test Mode)
 
  🚀 Features Implemented
@@ -42,5 +46,27 @@ https://pragra-fullstack-assignment-production.up.railway.app
 > Some features (authentication, products, payments) require environment variables.  
 > For security reasons, these are not included in the public deployment.  
 > The full application works correctly when run locally with the environment variables provided below.
+>Authentication
 
+Email & Password based signup & login
+ℹ️ OAuth and email verification were explored during development but are not enabled in the deployed version due to missing production environment variables.
 
+Backend Setup
+cd pragra-backend
+npm install
+npm run start:dev
+
+Frontend Setup
+npm install
+npm run dev
+
+⚙️ Environment Variables Setup
+📂 Frontend 
+NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+
+📂 Backend
+PORT=3001
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
