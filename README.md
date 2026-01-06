@@ -34,14 +34,6 @@ Database   | MongoDB Atlas
 Payments   | Stripe API  
 Deployment | Vercel (Frontend), Railway (Backend)
 
-🌐 Deployed URLs
-
-Frontend (Vercel):  
-https://pragra-fullstack-assignment.vercel.app/products
-
-Backend (Railway):  
-https://pragra-fullstack-assignment-production.up.railway.app
-
 > ⚠️ Important Note  
 > Some features (authentication, products, payments) require environment variables.  
 > For security reasons, these are not included in the public deployment.  
@@ -62,7 +54,7 @@ npm run dev
 
 ⚙️ Environment Variables Setup
 📂 Frontend 
-NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXT_PUBLIC_API_URL=api_url
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
 
 📂 Backend
