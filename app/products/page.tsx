@@ -9,20 +9,12 @@ export default function ProductsPage() {
   const [products, setProducts] = useState<any[]>([]);
 
   useEffect(() => {
-    if (!API) return;
-
-    axios.get(`${API}/products`)
-      .then((res) => {
-        setProducts(res.data);
-      })
-      .catch((err) => {
-        console.error("Failed to load products:", err);
-      });
+    axios.get(`${API}/products`).then((res) => {
+      setProducts(res.data);
+    });
   }, []);
 
   async function handleBuy(product: any) {
-    if (!API) return;
-
     const res = await axios.post(`${API}/payments/checkout`, {
       productName: product.name,
       amount: product.price,
